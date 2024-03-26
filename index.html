@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="keywords" content="Document" />
+        <meta name="description" content="Your Description..." />
+        <title>Suleiman</title>
+        <link
+            rel="stylesheet"
+            href="resources/swiper js/swiper-bundle.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="resources/css/loader.css" />
+        <link rel="stylesheet" href="resources/css/hamburger.css" />
+        <link rel="stylesheet" href="resources/css/home.css" />
+        <link rel="stylesheet" href="resources/css/about.css" />
+        <link rel="stylesheet" href="resources/css/services.css">
+        <link rel="stylesheet" href="resources/css/portfolio.css" />
+        <link rel="stylesheet" href="resources/css/blog.css" />
+        <link rel="stylesheet" href="resources/css/contact.css" />
+        <link href="resources/mapbox-gl/mapbox-gl.css" rel="stylesheet" />
+        <link rel="stylesheet" href="resources/css/style.css" />
+        <link
+            rel="shortcut icon"
+            href="resources/img/favicon.ico"
+            type="image/x-icon"
+        />
+    </head>
+    <body onload="loaded()">
+        <div class="loader">
+            <div class="c c1"></div>
+            <div class="c c2"></div>
+            <div class="c c3"></div>
+            <div class="c c4"></div>
+            <div class="c c5"></div>
+            <div class="c c6"></div>
+        </div>
+        <script>
+            let loader = document.querySelector(".loader");
+            function loaded() {
+                loader.classList.add("remove");
+                setTimeout(() => {
+                    loader.style.display = "none";
+                }, 1000);
+            }
+        </script>
+        <!-- HAMBURGER MENU BUTTON (responsively visible) -->
+        <div class="hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <!-- THE REAL NAVIGATION -->
+        <nav class="navigation">
+            <h1>
+                SULEIMAN JIBRIL
+                <div></div>
+                <div></div>
+            </h1>
+            <ul>
+                <li><a href="#" onclick="home()">home</a></li>
+                <li>
+                    <a
+                        href="#"
+                        onclick="about(); animate3.play(); animate4.play();"
+                        >about Me</a
+                    >
+                </li>
+                <li><a href="#" onclick="services(); animate6.play();">My services</a></li>
+                <li><a href="#" onclick="portfolio()">My portfolio</a></li>
+                <li><a href="#" onclick="blog()">Testimonials</a></li>
+                <li>
+                    <a href="#" onclick="contact(); animate5.play()">contact Me</a>
+                </li>
+            </ul>
+            <p style="color: white;">&copy; 2024 Suleiman Jibril</p>
+
+        </nav>
+
+        <div class="container">
+            <div class="layer layer1 active">
+                <div class="home main">
+                    <div class="canvas_container">
+                        <canvas></canvas>
+                    </div>
+                    <div class="content-for-home">
+                        <div class="img-container"></div>
+                        <p align="center">Suleiman Jibril is a versatile professional excelling in web development, programming, and social media management, bringing a unique blend of technical expertise and creative flair to the digital sphere. As a skilled web developer, he crafts visually stunning and user-friendly websites, leveraging HTML, CSS, JavaScript, and other languages to bring clients' visions to life with seamless functionality. In his role as a programmer, Suleiman showcases mastery in coding languages and problem-solving, delivering cutting-edge solutions tailored to clients' needs. As a social media manager, he curates compelling online presences, driving brand awareness and fostering community engagement through strategic audience engagement and shareable content across platforms.</p>
+                        <div class="social-icons">
+                            <div class="s-icon">
+                                <a href="https://www.facebook.com/suleiman.jibril.16">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <div class="s-name">Facebook</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="https://twitter.com/brain_computers">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <div class="s-name">X(Twitter)</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="https://github.com/slmnjibril">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <div class="s-name">GitHub</div>
+                            </div>
+                            
+                            <div class="s-icon">
+                                <a href="https://www.instagram.com/goldenbrainicthub?igsh=OGQ5ZDc2ODk2ZA==">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <div class="s-name">Instagram</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="mailto:slmnjibril@outlook.com">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <div class="s-name">Email</div>
+                            </div>
+                        </div>
+
+                        <div class="side-nav">
+                            <button
+                                onclick="about(); animate3.play(); animate4.play();"
+                            >
+                                <span class="w">Why</span>
+                                <span class="tooltip"> why me </span>
+                            </button>
+                            <button onclick="services(); animate6.play();">
+                                <span class="w">What</span>
+                                <span class="tooltip"> what Can I do </span>
+                            </button>
+                            
+                               
+                            </button>
+                            <button onclick="blog()">
+                                <span class="w">Proof</span>
+                                <span class="tooltip"> my clients testimonials </span>
+                            </button>
+                            <button onclick="contact(); animate5.play()">
+                                <span class="w">Where</span>
+                                <span class="tooltip"> where am I </span>
+                            </button>
+                        </div>
+
+                        <div class="titles-for-side-nav">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer2">
+                <div class="about main">
+                    <!-- SEGMENT FOR STYLING. -->
+                    <div class="styling">
+                        <div class="absolute box"></div>
+                        <div class="absolute circle"></div>
+                        <div class="absolute triangle"></div>
+                        <div class="absolute dots">
+                            <div class="dot dot1"></div>
+                            <div class="dot dot2"></div>
+                            <div class="dot dot3"></div>
+                            <div class="dot dot4"></div>
+                            <div class="dot dot5"></div>
+                            <div class="dot dot6"></div>
+                            <div class="dot dot7"></div>
+                            <div class="dot dot8"></div>
+                            <div class="dot dot9"></div>
+                            <div class="dot dot10"></div>
+                            <div class="dot dot11"></div>
+                            <div class="dot dot12"></div>
+                            <div class="dot dot13"></div>
+                            <div class="dot dot14"></div>
+                            <div class="dot dot15"></div>
+                            <div class="dot dot16"></div>
+                            <div class="dot dot17"></div>
+                            <div class="dot dot18"></div>
+                            <div class="dot dot19"></div>
+                            <div class="dot dot20"></div>
+                            <div class="dot dot21"></div>
+                            <div class="dot dot22"></div>
+                            <div class="dot dot23"></div>
+                            <div class="dot dot24"></div>
+                        </div>
+
+                        <svg
+                            class="wave absolute"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1450 320"
+                        >
+                            <path
+                                fill-opacity="1"
+                                d="M0,320L48,277.3C96,235,192,149,288,122.7C384,96,480,128,576,165.3C672,203,768,245,864,234.7C960,224,1056,160,1152,112C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                            ></path>
+                        </svg>
+
+                        <svg
+                            class="wave absolute opposite"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1450 320"
+                        >
+                            <path
+                                fill-opacity="1"
+                                d="M0,224L48,213.3C96,203,192,181,288,192C384,203,480,245,576,218.7C672,192,768,96,864,64C960,32,1056,64,1152,101.3C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                            ></path>
+                        </svg>
+                    </div>
+
+                    <style>
+                        body {
+                            font-family: 'Times New Roman', Times, serif;
+                        }
+                    </style>
+                    <div class="wrapper">
+                        <div class="face face1">
+                            <div class="content">
+                                <h1>Welcome, I'm Suleiman Jibril</h1>
+                                <p class="subtitle">Web Developer | Programmer | Social Media Manager</p>
+                                <p class="description">
+                                    With nearly a decade of experience in the IT industry, I specialize in web development, programming, and social media management. My primary goal is to tackle challenging projects that address clients' needs effectively. I am committed to delivering innovative solutions and providing attentive service to ensure client satisfaction.
+                                </p>
+                                <div class="buttons">
+                                    <p></p><br>
+                                    <p></p><br>
+                                    <p></p><br>
+                                    <p></p><br>
+                                    <p></p><br>
+                                    <a href="" download="suleiman_jibril_cv" class="button download">My CV</a>
+                                    <a href="" onclick="contact(); animate5.play()" class="button hire">Hire Me</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                    <!-- THE NAVIGATION OF ABOUT -->
+                    <nav class="about_nav">
+                        <ul>
+                            <li>
+                                <a class="active" href="#" data-text="one"
+                                    >Skills</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#" data-text="two">Experience</a>
+                            </li>
+                            <li>
+                                <a href="#" data-text="three">Education</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="about_container">
+                        <!-- SKILL BOX -->
+                        <div class="skills">
+                            <div class="skill">
+                                <div class="name">HTML5</div>
+                                <div class="value" style="left: 90%">95%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 95%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">CSS3</div>
+                                <div class="value" style="left: 90%"">55%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 75%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">JavaScript</div>
+                                <div class="value" style="left: 90%"">65%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 65%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">PHP</div>
+                                <div class="value" style="left: 90%"">50%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 50%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">Jquery</div>
+                                <div class="value" style="left: 90%">45%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 45%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">C++</div>
+                                <div class="value" style="left: 90%"">5%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 55%"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- EXPERIENCE -->
+                        <div class="experience">
+                            <div class="middle_line"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">July, 2017 - Date</i>
+                                <h2>Front-End Developer</h2>
+                                <i class="name_company">Golden Brain ICT Hub</i>
+                                <article class="text_hidden" style="color:black">
+                                    <p>As a front-end developer, 
+                                        I am passionate about crafting engaging
+                                         and intuitive user experiences that seamlessly 
+                                         blend design and functionality. With a strong foundation in HTML, 
+                                         CSS, and JavaScript, I specialize in transforming creative concepts 
+                                         into visually stunning and responsive websites. 
+                                         Leveraging my eye for design and attention to detail, 
+                                         I strive to create interfaces that not only 
+                                         captivate users but also enhance their interaction with digital platforms. 
+                                         Constantly staying updated with the latest trends and technologies in 
+                                         web development, I am dedicated to pushing the boundaries of what's 
+                                         possible in front-end design, ensuring that every 
+                                         project I undertake is not only aesthetically 
+                                         pleasing but also optimized for performance and accessibility.</p>
+                                </article>
+                            </div>
+                            <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">January, 2020 - Date</i>
+                                <h2>WordPress Developer</h2>
+                                <i class="name_company">Martech Computer Institute</i>
+                                <article class="text_hidden" style="color: black;">
+                                    As a WordPress developer, I bring a wealth of experience and expertise to crafting dynamic and user-centric websites tailored to meet the unique needs of clients. With a meticulous eye for detail and a passion for innovation, I specialize in leveraging the full potential of WordPress's versatile platform to create visually stunning and highly functional websites. From custom theme development to plugin integration and site optimization, I am dedicated to delivering tailored solutions that not only elevate brand presence but also ensure seamless user experiences. Whether it's building intuitive e-commerce platforms, engaging blog sites, or scalable corporate websites, I am committed to staying abreast of the latest WordPress trends and best practices to deliver cutting-edge solutions that exceed client expectations.
+                                </article>
+                            </div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">February, 2018 - Date</i>
+                                <h2>Social Media Manager</h2>
+                                <i class="name_company">Golden Brain ICT Hub</i>
+                                <article class="text_hidden" style="color:black">
+                                    As a seasoned social media manager, I bring a wealth of experience and expertise to the digital landscape. With a deep understanding of various social platforms and their dynamics, I am adept at crafting engaging content strategies tailored to the unique needs of clients and their target audiences. Leveraging my analytical skills, I meticulously track performance metrics to optimize campaigns and maximize reach and engagement. My creative flair and strategic approach enable me to curate compelling content that resonates with followers, driving brand awareness and fostering meaningful connections. Whether it's devising innovative marketing campaigns, managing online communities, or staying abreast of emerging trends, I am committed to delivering results-driven solutions that propel brands to success in the ever-evolving realm of social media.
+                                </article>
+                            </div>
+                        
+                        </div>
+                        <div class="education">
+                            <div class="middle_line"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-book-reader"></i>
+                                <i class="date">2023</i>
+                                <h3>Certified Information System Security Professional(CISSP)</h3>
+                                <i class="name_company">Udemy</i>
+                                <article class="text_hidden" style="color:black; text-align: center;">
+                                    Completed and obtained the certificate in July, 2023
+                                </article>
+                            </div>
+                            <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-book-reader"></i>
+                                <i class="date">2018 - 2019</i>
+                                <h3 class="right-align">Microsoft Certified Professional(MCP)</h3>
+                                <i class="name_company">Microsoft Inc.</i>
+                                <article class="text_hidden" style="color:black; text-align: center;">
+                                    Obtained after passing office 365 examination with Microsoft
+                                </article>
+                            </div>
+                            <div class="cover">
+                                <i class="job_box fas fa-book-open"></i>
+                                <i class="date">2010 - 2015</i>
+                                <h3 class="right-align"> B.Sc. In Computer Science</h3>
+                                <i class="name_company" style="text-align: left;">Kaduna State University, Kaduna, Nigeria</i>
+                                <article class="text_hidden" style="color:black; text-align: center;">
+                                   Graduated with second class upper division(3.94/5.00) CGPA
+                                </article>
+                            </div>
+                            <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-book-open"></i>
+                                <i class="date">2012 - 2016</i>
+                                <h3 class="right-align">Diploma In Data Processing</h3>
+
+                                <i class="name_company" style="text-align: left;">Sodiac Computer Institute, Kaduna, Nigeria</i>
+                                <article class="text_hidden" style="color:black; text-align: center;" >
+                                    Studied and learn general office software applications management and usage such as Word, Excel, Access etc.
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer3">
+                <div class="services main">
+                    <!-- <section class="background">
+                        <div class="bg_wrapper"></div>
+                    </section> -->
+                    <div class="hero">
+                        
+                       
+
+<br>
+<br>
+My SERVICES inclde but not limited to the following:
+<p class="hero-text">
+    Suleiman Jibril is an excellent web designer and faultless technician. He’s a pleasure to work with, great value for money and will always go the extra mile when necessary.
+</p>
+
+<ul style="text-align: left; color: red; background-color: rgb(135, 176, 238);">
+    <li>Web development</li>
+    <li>Software development</li>
+    <li>Mobile app development</li>
+    <li>Network administration</li>
+    <li>Database management</li>
+    <li>Cybersecurity services</li>
+    <li>Cloud computing solutions</li>
+    <li>IT consulting</li>
+    <li>Technical support</li>
+    <li>Digital marketing services</li>
+    <li>IT training and education</li>
+</ul>
+
+```
+                    </div>
+                    <div class="capabilities left move-little-down">
+                        <img src="resources/img/elements/web_bg.png" alt="" />
+                        <p class="c_content">
+                            <span class="c_title">Web</span>
+                            Suleiman creative journey commenced with web design. To realize his own designs, he diligently acquired coding skills and has since endeavored to remain abreast in both domains. Presently, for seamless collaboration with clients, he adeptly employs programming languages for design and prototyping purposes.
+                            <br />
+                            <a href="#">Learn More</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                        </p>
+                    </div>
+                    <div class="capabilities right">
+                        <p class="c_content">
+                            <span class="c_title">Graphics</span>
+                            With a designers eye for details, Suleiman Jibril is
+                            passionate about implementing designed into highly
+                            interactive experience by paying close attention to
+                            details, animations and performances.
+                            <br />
+                            <a href="#">Learn More</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                        </p>
+                        <img
+                            src="resources/img/elements/graphics_bg.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="capabilities left">
+                        <img
+                            src="resources/img/elements/seo_bg.png"
+                            alt=""
+                            style="
+                                background: #2929292f;
+                                backdrop-filter: blur(4px);
+                                border-radius: 40px;
+                            "
+                        />
+                        <p class="c_content">
+                            <span class="c_title">SEO</span>
+                            With 1+ years of experience in the Digital industry,
+                            he proved that the combination of strategic thinking
+                            and expertise will create a fascinating digital
+                            experience.
+                            <br />
+                            <a href="#">Learn More</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                        </p>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="layer layer4">
+                <div class="portfolio main">
+                    <div class="tip main">
+                        <div class="allContent">
+                            <div class="description" style="display: none">
+                                <div class="pro_intro">
+                                    <div class="nameplate">
+                                        
+                                    </div>
+                                    <div class="other_text">
+                                        
+                                    </div>
+                                </div>
+                                <div class="pro_info">
+                                    
+                                   
+                                </div>
+                            </div>
+
+                            <button class="closeButton">
+                                <span>Project Details</span>
+                                <div class="icon"></div>
+                            </button>
+                            <button class="exitButton">&times;</button>
+
+                            <div class="port_content">
+                                <div class="swiper-container-2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                    </div>
+                                    <!-- Add Pagination -->
+                                    <div class="swiper-scrollbar"></div>
+                                    <!-- Add Arrows -->
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="about_nav padding_top">
+                        <ul>
+                            <li>
+                                <a
+                                    class="filter active"
+                                    href="#"
+                                    data-filter="all"
+                                    >All</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".web"
+                                    >Web Design
+                            
+                                    </a
+                                    
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".logo"
+                                    >Logo</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".card"
+                                    >Cards</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".app"
+                                    >Apps</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".icon"
+                                    >Icons</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="mymixcont">
+                        
+                       
+                           
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer5">
+                <div class="testimonial">
+                    <h1>
+                        <span>See What My Clients Say about Me.</span>
+                    </h1>
+                    <p style="color: black; text-align: center;">
+                        <span>&ldquo;</span>
+                        "Working with Suleiman Jibril on our web development project was an absolute delight. Suleiman's expertise and dedication were evident from the outset. He meticulously crafted our website with precision, ensuring every detail aligned with our vision. Not only did he deliver a visually stunning site, but he also optimized its functionality, making it intuitive and user-friendly. Suleiman's professionalism and commitment to excellence were unmatched, and his proactive communication throughout the process instilled confidence in his abilities. Thanks to Suleiman's exceptional skills and tireless efforts, our website now stands as a testament to his outstanding craftsmanship. I wholeheartedly recommend Suleiman Jibril for any web development project; you won't find a more talented and reliable partner."
+                        <b>Tripple M Natural Beauty </b>
+                        <br>
+                    <br>
+                    "I had the pleasure of working with Suleiman Jibril for my graphic design needs, and I couldn't be more satisfied with the results. Suleiman's attention to detail, creativity, and professionalism truly set him apart. He took the time to understand my vision and brought it to life with his exceptional design skills. Not only did he exceed my expectations, but he also delivered the project ahead of schedule. Working with Suleiman was a seamless and enjoyable experience from start to finish. I highly recommend his services to anyone in need of top-notch graphic design work."
+                    <b>Briggs Biochemicals Ltd </b>
+                    <br>
+                    <br>
+
+"Working with Suleiman Jibril has been an absolute game-changer for our social media presence. His expertise and dedication have propelled our brand to new heights. Suleiman's strategic approach to social media management has significantly increased our engagement and brand visibility across various platforms. He has a remarkable knack for understanding our brand's voice and translating it into captivating content that resonates with our audience. Suleiman's commitment to excellence and creativity shines through in every post, campaign, and interaction. With his unparalleled skills and genuine passion for what he does, Suleiman Jibril has truly transformed our social media presence and propelled our brand into the spotlight. We couldn't be happier with the results and highly recommend his services to anyone looking to elevate their digital presence."
+<b>StudentsHub Nigeria </b>
+                </p>
+                    
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="resources/img/favicon.ico" alt="" />
+                                <h4>Erik Lasher</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p style="color: black;">
+                                    <span>&ldquo;</span>
+                                    Suleiman Jibril is an excellent web designer and faultless technician. He’s a pleasure to work with, great value for money and will always go the extra mile when necessary.
+                                </p>
+                                
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/favicon.ico" alt="" />
+                                <h4>Erik Lasher</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Suleiman Jibril is an excellent web designer and
+                                    faultless technician. He’s a pleasure to
+                                    work with, great value for money and will
+                                    always go the extra mile when necessary.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/favicon.ico" alt="" />
+                                <h4>Erik Lasher</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Suleiman Jibril is an excellent web designer and
+                                    faultless technician. He’s a pleasure to
+                                    work with, great value for money and will
+                                    always go the extra mile when necessary.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/favicon.ico" alt="" />
+                                <h4>Erik Lasher</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Suleiman Jibril is an excellent web designer and
+                                    faultless technician. He’s a pleasure to
+                                    work with, great value for money and will
+                                    always go the extra mile when necessary.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/favicon.ico" alt="" />
+                                <h4>Erik Lasher</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Suleiman Jibril is an excellent web designer and
+                                    faultless technician. He’s a pleasure to
+                                    work with, great value for money and will
+                                    always go the extra mile when necessary.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="resources/img/favicon.ico" alt="" />
+                                <h4>Erik Lasher</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Suleiman Jibril is an excellent web designer and
+                                    faultless technician. He’s a pleasure to
+                                    work with, great value for money and will
+                                    always go the extra mile when necessary.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer6" style="background-color: rgb(248, 34, 34);">
+                <div class="contact_us">
+                    
+                    <address class="info_container">
+                        <div class="info info1">
+                            <i class="fas fa-phone-alt"></i>
+                            <span class="iname">Phone</span>
+                            <a href="tel:+2348023338712">+2348023338712</a>
+                            <a href="tel:+2348166048646">+2348166048646</a>
+                        </div>
+                        <div class="info info2">
+                            <i class="fas fa-home"></i>
+                            <span class="iname">Address</span>
+                            <a href="https://www.google.com/maps/place/Kaduna,+Nigeria">
+
+                                <h3>No. 12D Gambarawa Street, Makera</h3>
+                                <span>Kaduna South, Kaduna</span><br />
+                                <span>Nigeria</span>
+                            </a>
+                        </div>
+                        <div class="info info3">
+                            <i class="fas fa-envelope"></i>
+                            <span class="iname">Email</span>
+                            <a href="mailto:email1.gmail.com"
+                                >slmnjibril@gmail.com</a
+                            >
+                            
+                        </div>
+                    </address>
+
+                    <form action="#" method="post">
+                        <h1>Get In Touch</h1>
+                        <div class="inp_field">
+                            <i class="fas fa-user"></i>
+                            <input
+                                type="text"
+                                name="name"
+                                class="fname"
+                                id="fname"
+                                placeholder="Full Name"
+                                required
+                            />
+                        </div>
+                        <div class="inp_field">
+                            <i class="fas fa-envelope"></i>
+                            <input
+                                type="email"
+                                name="email"
+                                class="email"
+                                id="email"
+                                placeholder="Email"
+                                required
+                            />
+                        </div>
+                        <div class="inp_field">
+                            <i class="fas fa-angle-double-right"></i>
+                            <input
+                                type="text"
+                                name="subject"
+                                class="subject"
+                                id="subject"
+                                placeholder="Subject"
+                                required
+                            />
+                        </div>
+                        <textarea
+                            name="message"
+                            cols="30"
+                            rows="5"
+                            class="message"
+                            id="message"
+                            placeholder="Message"
+                            required
+                        ></textarea>
+                        <button class="submit" id="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-----------------JQUERY {https://jquery.com/} [USED IN portfolio.js]----------------->
+        <script src="resources/js/jquery.min.js"></script>
+        <!-----------------MIX IT UP {https://www.kunkalabs.com/mixitup/} [USED IN portfolio.js]----------------->
+        <script src="resources/js/mixitup.min.js"></script>
+        <!-----------------SWIPER JS {https://swiperjs.com/} [USED IN portfolio.js, blog.js]----------------->
+        <script src="resources/swiper js/swiper-bundle.min.js"></script>
+        <!-----------------MAPBOX GL {https://www.mapbox.com/} [USED IN contact.js]----------------->
+        <script src="resources/mapbox-gl/mapbox-gl.js"></script>
+        <!-----------------EMAIL JS {https://www.emailjs.com/} [USED IN contact.js]----------------->
+        <script src="resources/js/email.min.js"></script>
+        <!-----------------ADDITIONAL SCRIPT FOR EMAIL JS----------------->
+        <script type="text/javascript">
+            (function () {
+                emailjs.init("user_5OMETIDQ2Nm9qBMtaFNz4");
+            })();
+        </script>
+        <!-----------------VANILLA TILT JS {https://micku7zu.github.io/vanilla-tilt.js/}----------------->
+        <script src="resources/js/vanilla-tilt.min.js"></script>
+        <!-----------------ANIME JS {https://animejs.com/} [USED LOCALLY.]----------------->
+        <script src="resources/js/anime.min.js"></script>
+        <!-----------------LOCAL (HOME)----------------->
+        <script src="resources/js/home.js"></script>
+        <!-----------------LOCAL (ABOUT)----------------->
+        <script src="resources/js/about.js"></script>
+        <!-----------------LOCAL (SERVICES)----------------->
+        <script src="resources/js/services.js"></script>
+        <!-----------------LOCAL (PORTFOLIO)----------------->
+        <script src="resources/js/portfolio.js"></script>
+        <!-----------------LOCAL (BLOG)----------------->
+        <script src="resources/js/blog.js"></script>
+        <!-----------------LOCAL (CONTACT)----------------->
+        <script src="resources/js/contact.js"></script>
+        <!-----------------LOCAL (MAIN FILE)----------------->
+        <script src="resources/js/main.js"></script>
+
+        <!-----------------LOCAL (MAIN FILE { USED TO ANIMATE WEBPAGE.})----------------->
+        <script>
+            const animate1 = anime.timeline({
+                targets: ".circle",
+                loop: true,
+                duration: 2000,
+                direction: "alternate",
+                easing: "easeInOutQuad",
+            });
+            animate1.add({
+                translateX: 350,
+            });
+
+            let dot = document.querySelectorAll(".dot");
+            for (let i = 0; i < dot.length; i++) {
+                const ind = dot[i];
+                const animate2 = anime.timeline({
+                    targets: ind,
+                    loop: true,
+                    direction: "alternate",
+                    delay: i * 100,
+                });
+                animate2.add({
+                    scale: 2,
+                });
+            }
+
+            let span = document.querySelectorAll(".content .text span");
+            const animate3 = anime.timeline({
+                targets: span,
+                easing: "easeInOutExpo",
+                delay: anime.stagger(20, { direction: "reverse" }),
+                direction: "reverse",
+                autoplay: false,
+            });
+
+            animate3.add({
+                rotate: () => {
+                    return anime.random(-360, 360);
+                },
+                translateX: () => {
+                    return anime.random(-500, 500);
+                },
+                translateY: () => {
+                    return anime.random(-500, 500);
+                },
+                duration: 3000,
+            });
+
+            const animate4 = anime({
+                targets: ".button",
+                scale: [0, 1],
+                delay: anime.stagger(200, { start: 7000 }),
+                autoplay: false,
+            });
+
+            const animate5 = anime({
+                targets: [
+                    document.querySelectorAll(".info"),
+                    document.querySelectorAll(".inp_field"),
+                    ".message",
+                    ".submit",
+                ],
+                translateY: [50, 0],
+                rotateX: [90, 0],
+                opacity: [0, 1],
+                delay: anime.stagger(300, { start: 1000 }),
+                duration: 750,
+                autoplay: false,
+                easing: "easeOutQuint",
+            });
+            
+            const animate6 = anime({
+                targets: ['.services .t_dummy', '.services .hero-text'],
+                duration: 1000,
+                scaleX: [0, 1],
+                delay: anime.stagger(300, {start: 1000}),
+                autoplay: false,
+            });
+
+            function resize() {
+                if (window.innerWidth <= 632) {
+                    animate5.play();
+                    animate3.play();
+                    animate4.play();
+                    animate6.play();
+                }
+            }
+            resize();
+            window.addEventListener("resize", resize);
+        </script>
+    </body>
+</html>

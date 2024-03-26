@@ -1,0 +1,104 @@
+/* Importing fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Script&display=swap");
+
+/* Resetting default styles and setting up base styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f8f9fa; /* Light grey background */
+}
+
+/* Container for main content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Heading styles */
+h1, h2, h3 {
+    font-family: "Kaushan Script", cursive;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 48px;
+    color: #08fa14; /* Dark grey */
+}
+
+h2 {
+    font-size: 36px;
+    color: #666; /* Medium grey */
+}
+
+h3 {
+    font-size: 24px;
+    color: #999; /* Light grey */
+}
+
+/* Paragraph styles */
+p {
+    color: #333; /* Dark grey */
+    line-height: 1.6;
+}
+
+/* Links */
+a {
+    color: #007bff; /* Blue */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff; /* Blue */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Section styles */
+.section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px; /* Negative margin to counteract padding */
+}
+
+.col {
+    flex: 1;
+    padding: 10px; /* Spacing between columns */
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111111; /* Blue */
+    color: #f80707;
+}
